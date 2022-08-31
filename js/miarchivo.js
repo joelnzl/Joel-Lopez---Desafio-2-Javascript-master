@@ -13,11 +13,18 @@ function addProduct({ name, price }) {
   if (totalNumber >= 1000)
   totaldisc.textContent = totalNumber + ship - discount ;
  
-
 }
 
 
+const products = [
+  { Name: "Hat", Price: 100,},
+  { Name: "Shoes", Price: 300},
+  { Name: "Hoodie", Price: 200 },
+]
 
+const nameandprice = products.map(product => product.Name+ ":$" + product.Price)
+
+console.log(nameandprice)
 
 
 
