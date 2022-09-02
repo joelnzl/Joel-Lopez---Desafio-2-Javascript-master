@@ -16,6 +16,8 @@ function addProduct({ name, price }) {
 }
 
 
+
+
 const products = [
   { Name: "Hat", Price: 100,},
   { Name: "Shoes", Price: 300},
@@ -26,6 +28,20 @@ const nameandprice = products.map(product => product.Name+ ":$" + product.Price)
 
 console.log(nameandprice)
 
+
+
+const masbarato= products.filter(product => product.Price <= 100)
+
+const productomasbarato = masbarato.map(product => product.Name)
+
+console.log(productomasbarato)
+
+
+const mascaro= products.filter(product => product.Price >= 300)
+
+const productomascaro = mascaro.map(product => product.Name)
+
+console.log(productomascaro)
 
 
 
