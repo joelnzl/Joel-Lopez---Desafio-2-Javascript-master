@@ -19,31 +19,34 @@ function addProduct({ name, price }) {
 
 
 const products = [
-  { Name: "Hat", Price: 100,},
-  { Name: "Shoes", Price: 300},
-  { Name: "Hoodie", Price: 200 },
+  { name: "Hat", price: 100,},
+  { name: "Shoes", price: 300},
+  { name: "Hoodie", price: 200 },
 ]
 
-const nameandprice = products.map(product => product.Name+ ":$" + product.Price)
+const nameandprice = products.map(product => product.name+ ":$" + product.price)
 
 console.log(nameandprice)
 
 
 
-const masbarato= products.filter(product => product.Price <= 100)
+const masbarato= products.filter(product => product.price <= 100)
 
-const productomasbarato = masbarato.map(product => product.Name)
+const productomasbarato = masbarato.map(product => product.name)
 
 console.log(productomasbarato)
 
 
-const mascaro= products.filter(product => product.Price >= 300)
+const mascaro= products.filter(product => product.price >= 300)
 
-const productomascaro = mascaro.map(product => product.Name)
+const productomascaro = mascaro.map(product => product.name)
 
 console.log(productomascaro)
 
 
 
-
+let price = document.getElementsByClassName("price");
+console.log("Hat " + price[0].innerHTML);
+console.log("Shoes " + price[1].innerHTML);
+console.log("Hoodie " + price[2].innerHTML);   
 
