@@ -50,3 +50,18 @@ console.log("Hat " + price[0].innerHTML);
 console.log("Shoes " + price[1].innerHTML);
 console.log("Hoodie " + price[2].innerHTML);   
 
+
+
+//EVENTO
+
+  function comprarproductos(){}
+  var compra = function(){
+    alert('Tu compra fue realizada con éxito');
+
+  };
+
+  var botoncompra = document.getElementById('comprar');
+  botoncompra.addEventListener('click', compra);
+
+
+
