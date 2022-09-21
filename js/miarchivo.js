@@ -6,14 +6,20 @@ const ship = 10;
 const discount = 150;
   
 
+
+
 function addProduct({ name, price }) {
   totalNumber += price;
   total.textContent = totalNumber + ship;
 
   if (totalNumber >= 1000)
   totaldisc.textContent = totalNumber + ship - discount ;
- 
+
+  // OP TERNARIO
+  total.textContent <= 1000 ? alert("Product added") : alert("A $150 discount has been applied to your purchase")
+
 }
+
 
 
 
@@ -24,9 +30,10 @@ const products = [
   { name: "Hoodie", price: 200 },
 ]
 
-const nameandprice = products.map(product => product.name+ ":$" + product.price)
+// DESESTRUCTURACION y SPREAD
+products.map(({ name, price}) => name + ':$' + price)
 
-console.log(nameandprice)
+console.log(...products)
 
 
 
@@ -55,13 +62,13 @@ console.log("Hoodie " + price[2].innerHTML);
 //EVENTO
 
   function comprarproductos(){}
-  var compra = function(){
-    alert('Tu compra fue realizada con éxito');
+  var buy = function(){
+    alert('Your order was taken successfully');
 
   };
 
-  var botoncompra = document.getElementById('comprar');
-  botoncompra.addEventListener('click', compra);
+  var botoncompra = document.getElementById('buying');
+  botoncompra.addEventListener('click', buy);
 
 
 
