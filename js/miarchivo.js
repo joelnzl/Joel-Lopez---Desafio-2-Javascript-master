@@ -15,8 +15,19 @@ function addProduct({ name, price }) {
   if (totalNumber >= 1000)
   totaldisc.textContent = totalNumber + ship - discount ;
 
+  
+
   // OP TERNARIO
-  total.textContent <= 1000 ? alert("Product added") : alert("A $150 discount has been applied to your purchase")
+  total.textContent <= 1000 ? Swal.fire({
+    text: "The product has been added to the order",
+    icon: 'success',
+    confirmButtonText: 'Continue shopping'
+})
+:  Swal.fire({
+  text: 'A $150 discount has been applied to your purchase',
+  icon: 'info',
+  confirmButtonText: 'Continue shopping'
+})
 
 }
 
@@ -63,12 +74,18 @@ console.log("Hoodie " + price[2].innerHTML);
 
   function comprarproductos(){}
   var buy = function(){
-    alert('Your order was taken successfully');
+    Swal.fire({
+      title: 'Your order was taken succesfuly',
+      icon: 'success',
+      confirmButtonText: 'Continue shopping'
+    })
+    
 
   };
 
   var botoncompra = document.getElementById('buying');
   botoncompra.addEventListener('click', buy);
+  
 
 
 
