@@ -4,6 +4,31 @@ const totaldisc = document.getElementById('totaldisc');
 let totalNumber = 0;
 const ship = 10;
 const discount = 150;
+document.getElementById('jsonBtn').addEventListener('click', loadJSON);
+
+
+function loadJSON() {
+  fetch('misproductos.json')
+  .then(function(res) {
+
+  return res.json();
+})
+
+.then(function(data){
+  let html= '';
+  data.forEach(function(products) {
+    html += `
+    <li>${products.name} ${products.price}</li>
+    `;
+})
+
+document.getElementById('productlist').innerHTML = html;
+
+})
+
+}
+
+
   
 
 

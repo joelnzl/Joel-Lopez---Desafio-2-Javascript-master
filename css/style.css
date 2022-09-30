@@ -86,3 +86,8 @@ footer {
 .products ul li p {
   margin: 10px 0;
 }
+
+#productlist{
+
+  list-style:none;
+}
