@@ -20,6 +20,10 @@
             crossorigin="anonymous"
         >
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+
         <!-- Linkeo css -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -38,10 +42,6 @@
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Tyler, The Creator - Official Merchandising</a>
                 </div>
-
-                
-
-                
             </nav>
         </header>
 
@@ -57,22 +57,19 @@
                         <img src="fotos/producto1.jpg" />
                         <p>Hat</p>
                         <p class="price">Price: 100</p>
-                        <button onclick="addProduct({ name: 'Hat', price: 100 })">Add to cart</button>
+                        <button class="btn btn-primary" onclick="addProduct({ name: 'Hat', price: 100 })">Add to cart</button>
                     </li>
-
-                   
-                    </script>
                     <li class="merch">
                         <img src="fotos/producto2.jpg" />
                         <p>Shoes</p>
                         <p class="price">Price: 300</p>
-                        <button onclick="addProduct({ name: 'Shoes', price: 300 })">Add to cart</button>
+                        <button class="btn btn-primary" onclick="addProduct({ name: 'Shoes', price: 300 })">Add to cart</button>
                     </li>
                     <li class="merch">
                         <img src="fotos/producto3.jpg" />
                         <p>Hoodie</p>
                         <p class="price">Price: 200</p>
-                        <button onclick="addProduct({ name: 'Hoodie', price: 200 })">Add to cart</button>
+                        <button class="btn btn-primary" onclick="addProduct({ name: 'Hoodie', price: 200 })">Add to cart</button>
                     </li>
                 </ul>
             </section>
@@ -82,19 +79,18 @@
                 <h4>Total price + US Ship</h4>
                 <span><b id="total"></b></span>
 
-                <H4>Total price with discount</H4>
-                <span><b id="totaldisc"></b></span>
-                
-                <button id="buying">Comprar</button>
-
-
             <div>
-                <button id="jsonBtn">List</button>
-                <div id="productlist"></div>
+                <button class="btn btn-secondary" id="jsonBtn" data-bs-toggle="collapse" data-bs-target="#listCollapse">
+                    List
+                </button>
             </div>
+            <div class="collapse" id="listCollapse"></div>
 
-
-                
+            <div class="cart">
+                <b>Cart</b>
+                <ul id="cartlist"></ul>
+                <button class="btn btn-success" id="buying">Comprar</button>
+            </div>
 
             </section>
 
